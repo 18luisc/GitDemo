@@ -11,12 +11,22 @@ package model;
 public class Person {
     private int id;
     private String name;
+    private String address;
     private String lastName;
 
-    public Person(int id, String name, String lastName) {
+    public Person(int id, String name, String lastName,String address) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
+        
+    }
+    
+
+    public Person(int id, String name, String address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+
     }
 
     public int getId() {
@@ -31,15 +41,13 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
         return "Person{" + "id=" + id + ", name=" + name + '}';
     }
 
+
+    
     public String getLastName() {
         return lastName;
     }
@@ -48,6 +56,10 @@ public class Person {
         this.lastName = lastName;
     }
     
+      
+
     
     
+
+
 }
